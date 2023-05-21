@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Escolha uma cor para pré-visualizar o background">
+    <title>Pré-visualizar Background</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="/dw1a3/atividades/a9/css/style.css">
+</head>
+<body>
+<div class="page-container">
+<div class="content-wrap">
+
+
+    <h1>Pré-visualizar background</h1>
+    <h2>Selecione uma cor:</h2>
+    <div id="colors">        
+        <input type="button" id="color1" class="jscolor {onFineChange: 'changeColor(this)',width:101, padding:0, shadow:false, borderWidth:0, backgroundColor:'transparent', insetColor:'#000',position:'left'}" name="color1" value="F4FF72">
+    </div>
+    <div class="code">
+        <code id="css"></code>
+        <button id="copy" data-clipboard-target="#css"><i class="far fa-copy"></i><span id="tooltip"></span></button>
+    </div>
+    
+    <script src="/dw1a3/atividades/a9/js/lib/jscolor.js"></script>
+    <script src="/dw1a3/atividades/a9/js/lib/clipboard.js"></script>
+    <script type="text/javascript" src="/dw1a3/atividades/a9/js/script.js"></script>
+    
+</body>
+</html>
