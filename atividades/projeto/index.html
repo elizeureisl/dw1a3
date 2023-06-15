@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato|Muli" rel="stylesheet">
+        <title>Note App</title>
+    </head>
+    <body>
+        <p class="texts">*double-click on the top of the note to hide it</p>
+        <button class="add" id="add">
+            <i class="fas fa-plus"></i> New Note
+        </button>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2>Enviar nota por e-mail</h2>
+                <form id="email-form">
+                    <label for="recipient-email">Endereço de e-mail:</label>
+                    <input type="email" id="recipient-email" placeholder="digite o e-mail do destinatário" required>
+
+                    <label for="email-subject">Assunto:</label>
+                    <input type="text" id="email-subject" placeholder="digite o assunto do e-mail" required>
+
+                    <div class="button-container">
+                        <button type="submit">Enviar</button>
+                        <button type="button" id="cancel-button">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/3.0.8/marked.min.js" integrity="sha512-OA0KzIFyfjEiECfdTeeqyDa++XmSLWyIBr8bWf2lpdv3qNr2TxpR9uaL2fKaz/Nz35kVVPEagjhWdWat/khWXw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,290 @@
+:root {
+    --white: #ededed;
+    --primary: #5e43f3;
+    --dark: #121212;
+    --dark-grey: #282828; 
+    --neutral-grey: #3f3f3f; 
+    --light-grey: #717171;
+}
+
+* {
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body {
+    font-weight: 200;
+    font-family: "Muli", sans-serif;
+    padding-top: 3rem;
+    margin: 0;
+    flex-wrap: wrap;
+    display: flex;
+    background-color: var(--dark);
+}
+
+body .texts {
+    position: absolute;
+    top: 0.5rem;
+    left: 1.2rem;
+    color: var(--light-grey);
+    font-style: italic;
+    text-transform: lowercase;
+    font-size: 1rem;
+}
+
+img {
+    width: 40%;
+    height: 40%;
+    max-height: 60%;
+    float: left;
+    padding-right: 10px;
+    /* display: none; */
+}
+
+.add {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 3px;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.note {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+    margin: 30px 20px;
+    height: 200px;
+    width: 200px;
+    min-width: 15rem;
+    min-height: 15rem;
+    resize: both;
+    overflow: hidden;
+    border-radius: 15px 15px 0px;
+    /* position: relative; */
+    /* cursor: move; */
+}
+
+.note .config {
+    background-color: var(--neutral-grey);
+    display: flex;
+    justify-content: flex-end;
+    padding: 0rem 0.8rem;
+    width: 100%;
+}
+
+.note .config button {
+    background-color: transparent;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.3rem;
+    border: none;
+}
+
+.note textarea {
+    outline: none;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--dark-grey);
+    border: none;
+    height: 90%;
+    width: 100%;
+    padding: 20px;
+    overflow: auto;
+}
+
+.note textarea::placeholder {
+    text-transform: lowercase;
+    font-style: italic;
+}
+
+.note .main {
+    overflow: visible;
+    height: 100%;
+    width: 100%;
+}
+
+.note .main a {
+    text-transform: lowercase;
+    color: var(--primary);
+}
+
+.main {
+    padding: 0px 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.note .config .more ul {
+    list-style-type: none;
+    list-style: none;
+    padding: 0;
+}
+
+.note .config .more ul li {
+    display: inline;
+    position: relative;
+}
+
+.note .config .more ul li a {
+    color: var(--white);
+    text-decoration: none;
+    text-transform: lowercase;
+    display: inline-block;
+    padding-right: 0.5rem;
+}
+
+.note .config .more ul ul {
+    display: none;
+    position: absolute;
+}
+
+/* .note .config .more ul li:focus-within ul, */
+.note .config .more ul li:hover ul {
+    display: block;
+}
+
+.note .config .more ul ul {
+    width: 175px;
+    padding: 0px 0px 0px 0px;
+    background-color: var(--neutral-grey);
+    position: fixed;
+    border-radius: 5px;
+    margin-top: 0px;
+    z-index: 999;
+    border: 5px solid transparent;
+}
+
+.note .config .more ul ul li a {
+    display: block;
+    padding: 10px 20px;
+}
+
+.note .config .more ul ul li a:hover {
+    background-color: var(--primary);
+}
+
+.note textarea::-webkit-scrollbar,
+.note::-webkit-scrollbar {
+    width: 10px;
+}
+
+.note textarea::-webkit-scrollbar-track,
+.note::-webkit-scrollbar-track {
+    /* border-radius: 0px 15px 0px 0px; */
+    background: var(--light-grey);
+}
+
+.note textarea::-webkit-scrollbar-thumb,
+.note::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+    /* border-radius: 0px 15px 0px 0px;        */
+    border: 3px solid var(--white); 
+}
+
+/* E-mail */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid var(--dark);
+    width: 300px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+}
+
+.modal-content label, h2 {
+    display: block;
+    margin-bottom: 5px;
+    text-transform: lowercase;
+}
+
+#email-subject::placeholder,
+#recipient-email::placeholder {
+    font-family: "Muli", sans-serif;
+    text-transform: lowercase;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+#email-subject,
+#recipient-email {
+    font-family: "Muli", sans-serif;
+    text-transform: lowercase;
+}
+
+.modal-content input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    display: block;
+    margin-top: 10px;
+    font-family: "Muli", sans-serif;
+    background-color: var(--dark-grey);
+    color: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid var(--dark-grey);
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 10px;
+}
+  
+.button-container button {
+    flex: 0 0 auto;
+}
+
+#save-notion {
+    color: var(--light-grey);
+}
+#save-notion:hover {
+    background-color: var(--neutral-grey);
+    color: var(--light-grey);
+    cursor: default;
+}
+
+table th, table td {
+    border: 1px solid var(--white);
+    padding: 5px;
+}
+/* table th {
+    background-color: var(--neutral-grey);
+  } */
+
+@media screen and (max-width: 490px) {
+    body .texts {
+        display: none;
+    }
+}
+
+
